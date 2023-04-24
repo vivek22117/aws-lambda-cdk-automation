@@ -32,7 +32,7 @@ const createStacks = async () => {
 export const getContext = async (app: cdk.App): Promise<CDKContext> => {
     return new Promise(async (resolve, reject) => {
         try {
-            const currentBranch = 'master';
+            const currentBranch = 'develop';
             console.log(`current git branch is: ${currentBranch}`);
 
             const environment = app.node.tryGetContext('environments').find((e: any) => e.branchName === currentBranch);
